@@ -2,12 +2,14 @@ const express = require('express');
 const app = express();
 const PORT = 8081;
 
-app.get('/health', (req, res) => {
-    // const temp = req.body?.hello?.world;
+app.use(express.json());
 
-    // if (temp) {
-    //     console.log('hello world')
-    // }
+app.get('/health', (req, res) => {
+  const temp = req.body?.hello?.world;
+
+  if (temp) {
+    console.log('hello world')
+  }
 
   console.log('hello express');
   res.json({ status: 'ok' });
