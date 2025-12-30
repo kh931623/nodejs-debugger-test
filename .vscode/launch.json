@@ -11,6 +11,16 @@
       "remoteRoot": "/usr/src/app",
       "protocol": "inspector",
       "restart": true
+    },
+    {
+      "name": "Docker: Attach to App2",
+      "type": "node",
+      "request": "attach",
+      "port": 9231,
+      "address": "localhost",
+      "localRoot": "${workspaceFolder}/app2",
+      "remoteRoot": "/usr/src/app",
+      "restart": true
     }
   ]
 }
